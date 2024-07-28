@@ -86,7 +86,7 @@ export default function LandingPage() {
             <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
             <Hero />
             <Box sx={{ bgcolor: 'background.default' }}>
-                <LogoCollection />
+                {/* <LogoCollection /> */}
                 <Features />
                 <Divider />
                 <Testimonials />
