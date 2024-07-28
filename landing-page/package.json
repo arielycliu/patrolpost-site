@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@fontsource-variable/open-sans": "^5.0.29",
+    "@fontsource-variable/readex-pro": "^5.0.13",
+    "@fontsource/readex-pro": "^5.0.13"
+  }
+}

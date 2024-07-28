@@ -15,13 +15,13 @@ import FacebookIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/X';
 
-import SitemarkIcon from './SitemarkIcon';
+import WatchdogIcon from './WatchdogIcon';
 
 function Copyright() {
   return (
     <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
       {'Copyright © '}
-      <Link href="https://mui.com/">Sitemark&nbsp;</Link>
+      <Link href="">WatchDog&nbsp;</Link>
       {new Date().getFullYear()}
     </Typography>
   );
@@ -56,7 +56,7 @@ export default function Footer() {
           }}
         >
           <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
-            <SitemarkIcon />
+            <WatchdogIcon />
             <Typography variant="body2" gutterBottom sx={{ fontWeight: 600, mt: 2 }}>
               Join the newsletter
             </Typography>
@@ -102,7 +102,7 @@ export default function Footer() {
             Features
           </Link>
           <Link color="text.secondary" variant="body2" href="#">
-            Testimonials
+            Use Cases
           </Link>
           <Link color="text.secondary" variant="body2" href="#">
             Highlights
