@@ -127,7 +127,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                             Sign in
                         </Button> */}
                         <Button color="primary" variant="contained" size="small">
-                            Book a demo
+                            Get a demo
                         </Button>
                     </Box>
                     <Box sx={{ display: { sm: 'flex', md: 'none' } }}>
@@ -169,7 +169,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                                 </MenuItem> */}
                                 <MenuItem>
                                     <Button color="primary" variant="contained" halfWidth>
-                                        Book a demo
+                                        Get a demo
                                     </Button>
                                 </MenuItem>
                             </Box>

@@ -120,7 +120,12 @@ export default function Hero() {
                                 },
                             }}
                         />
-                        <Button variant="contained" color="primary">
+                        <Button variant="contained" color="primary" sx={{
+                                ml: {
+                                    xs: 0,
+                                    sm: -10
+                                }
+                            }}>
                             Get a demo
                         </Button>
                     </Stack>

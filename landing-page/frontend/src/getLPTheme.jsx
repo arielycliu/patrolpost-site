@@ -1,4 +1,5 @@
 import { createTheme, alpha } from '@mui/material/styles';
+import { margin } from '@mui/system';
 
 const customTheme = createTheme();
 const fontFamilyCustom = 'Sora, Poppins, IBM Plex Sans, Open Sans, Inter, sans-serif';
@@ -195,7 +196,7 @@ const getDesignTokens = (mode) => ({
         },
     },
     shape: {
-        borderRadius: 12,
+        borderRadius: 25,
     },
 });
 
@@ -271,7 +272,7 @@ export default function getLPTheme(mode) {
                         '&:focus-visible': {
                             outline: `3px solid ${alpha(brand[400], 0.5)}`,
                             outlineOffset: '2px',
-                        },
+                        }
                     },
                 },
             },
@@ -288,7 +289,7 @@ export default function getLPTheme(mode) {
                                 },
                                 style: {
                                     height: '2rem', // 32px
-                                    padding: '0 0.5rem',
+                                    padding: '0 0.7rem',
                                 },
                             },
                             {
@@ -306,16 +307,17 @@ export default function getLPTheme(mode) {
                                 },
                                 style: {
                                     color: 'white',
-                                    backgroundColor: brand[300],
-                                    backgroundImage: `linear-gradient(to bottom, ${alpha(brand[400], 0.8)}, ${brand[500]})`,
+                                    backgroundColor: brand[500],
                                     boxShadow: `inset 0 2px 0 ${alpha(brand[200], 0.2)}, inset 0 -2px 0 ${alpha(brand[700], 0.4)}`,
-                                    border: `1px solid ${brand[500]}`,
+                                    // border: `1px solid ${brand[500]}`,
                                     '&:hover': {
-                                        backgroundColor: brand[700],
+                                        // backgroundColor: brand[700],
+                                        backgroundImage: `linear-gradient(to bottom, ${alpha(brand[400], 0.8)}, ${brand[800]})`,
                                         boxShadow: 'none',
                                     },
                                     '&:active': {
-                                        backgroundColor: brand[700],
+                                        // backgroundColor: brand[700],
+                                        backgroundImage: `linear-gradient(to bottom, ${alpha(brand[400], 0.8)}, ${brand[800]})`,
                                         boxShadow: `inset 0 2.5px 0 ${alpha(brand[700], 0.4)}`,
                                     },
                                 },
