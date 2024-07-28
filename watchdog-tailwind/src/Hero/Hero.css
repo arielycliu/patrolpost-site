@@ -1,0 +1,49 @@
+.robotImage {
+    height: 100%;
+    display: block;
+}
+/* .alertImage {
+    width: 10rem;
+}
+.gateImage {
+    width: 15rem;
+}
+.gridImage {
+    width: 15rem;
+}
+.carsImage {
+    height: 13rem;
+} */
+
+h2 {
+    background-image: linear-gradient(60deg, #01CDFF, #5400fd);
+    /* background: -webkit-linear-gradient(#01CDFF, #5400fd); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+span:before {
+    content: '';
+    animation: animate linear infinite 8s;
+}
+
+@keyframes animate {
+    0% {
+      content: ' Schools';
+    }
+    20% {
+      content: ' Hospitals';
+    }
+    40% {
+      content: ' Construction Sites';
+    }
+    60% {
+      content: ' Parking Lots';
+    }
+    80% {
+      content: ' Schools';
+    }
+    100% {
+      content: ' Everything';
+    }
+  }
