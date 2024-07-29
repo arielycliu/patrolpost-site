@@ -80,14 +80,6 @@ function AppAppBar({ mode, toggleColorMode }) {
                                 variant="text"
                                 color="info"
                                 size="small"
-                                onClick={() => scrollToSection('usecases')}
-                            >
-                                Use Cases
-                            </Button>
-                            <Button
-                                variant="text"
-                                color="info"
-                                size="small"
                                 onClick={() => scrollToSection('highlights')}
                             >
                                 Highlights
@@ -96,10 +88,18 @@ function AppAppBar({ mode, toggleColorMode }) {
                                 variant="text"
                                 color="info"
                                 size="small"
+                                onClick={() => scrollToSection('usecases')}
+                            >
+                                Use Cases
+                            </Button>
+                            {/* <Button
+                                variant="text"
+                                color="info"
+                                size="small"
                                 onClick={() => scrollToSection('pricing')}
                             >
                                 Pricing
-                            </Button>
+                            </Button> */}
                             <Button
                                 variant="text"
                                 color="info"
@@ -149,25 +149,49 @@ function AppAppBar({ mode, toggleColorMode }) {
                                     </IconButton>
                                 </Box>
                                 <Divider sx={{ my: 3 }} />
-                                <MenuItem onClick={() => scrollToSection('features')}>
+                                <MenuItem onClick={() => scrollToSection('features')}
+                                    sx={{
+                                        borderRadius: '15px'
+                                    }}
+                                >
                                     Features
                                 </MenuItem>
-                                <MenuItem onClick={() => scrollToSection('usecases')}>
-                                    Use Cases
-                                </MenuItem>
-                                <MenuItem onClick={() => scrollToSection('highlights')}>
+                                <MenuItem onClick={() => scrollToSection('highlights')}
+                                    sx={{
+                                        borderRadius: '15px'
+                                    }}
+                                >
                                     Highlights
                                 </MenuItem>
-                                <MenuItem onClick={() => scrollToSection('pricing')}>
-                                    Pricing
+                                <MenuItem onClick={() => scrollToSection('usecases')}
+                                    sx={{
+                                        borderRadius: '15px'
+                                    }}
+                                >
+                                    Use Cases
                                 </MenuItem>
-                                <MenuItem onClick={() => scrollToSection('faq')}>FAQ</MenuItem>
+                                {/* <MenuItem onClick={() => scrollToSection('pricing')}>
+                                    Pricing
+                                </MenuItem> */}
+                                <MenuItem onClick={() => scrollToSection('faq')}
+                                    sx={{
+                                        borderRadius: '15px'
+                                    }}
+                                >
+                                    FAQ
+                                </MenuItem>
                                 {/* <MenuItem>
                                     <Button color="primary" variant="contained" fullWidth>
                                         Sign up
                                     </Button>
                                 </MenuItem> */}
-                                <MenuItem>
+                                <MenuItem
+                                sx={{
+                                    '&:hover': {
+                                        backgroundColor: 'transparent',
+                                    },
+                                }}
+                                >
                                     <Button color="primary" variant="contained" halfWidth>
                                         Get a demo
                                     </Button>

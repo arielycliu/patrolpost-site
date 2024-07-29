@@ -36,12 +36,12 @@ const StyledBox = styled('div')(({ theme }) => ({
 
 const ImageBox = styled('div')(({ theme }) => ({
     alignSelf: 'center',
-    backgroundPosition: 'center',
     width: '100%',
     height: 400,
     marginTop: theme.spacing(8),
     backgroundImage: `url(${'/src/assets/robot.png'})`,
     backgroundSize: 'contain',
+    backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     [theme.breakpoints.up('sm')]: {
         marginTop: theme.spacing(10),

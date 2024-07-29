@@ -9,7 +9,7 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { useTheme } from '@mui/system';
 
-const userTestimonials = [
+const dataUseCases = [
   {
     avatar: <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />,
     name: 'Remy Sharp',
@@ -77,7 +77,7 @@ const logoStyle = {
   opacity: 0.3,
 };
 
-export default function Testimonials() {
+export default function UseCases() {
   const theme = useTheme();
   const logos = theme.palette.mode === 'light' ? darkLogos : whiteLogos;
 
@@ -101,7 +101,7 @@ export default function Testimonials() {
         }}
       >
         <Typography component="h2" variant="h4" sx={{ color: 'text.primary' }}>
-          Testimonials
+          Use Cases
         </Typography>
         <Typography variant="body1" sx={{ color: 'text.secondary' }}>
           See what our customers love about our products. Discover how we excel in
@@ -110,7 +110,7 @@ export default function Testimonials() {
         </Typography>
       </Box>
       <Grid container spacing={2}>
-        {userTestimonials.map((testimonial, index) => (
+        {dataUseCases.map((testimonial, index) => (
           <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: 'flex' }}>
             <Card
               sx={{
