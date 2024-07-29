@@ -20,6 +20,7 @@ import Footer from './components/Footer';
 import getLPTheme from './getLPTheme';
 import '@fontsource-variable/open-sans' // paragraph
 import '@fontsource-variable/readex-pro' // headings
+import CallToAction from './components/CallToAction';
 
 function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }) {
     return (
@@ -95,8 +96,9 @@ export default function LandingPage() {
                 <Divider />
                 {/* <Pricing /> */}
                 {/* <Divider /> */}
-                <FAQ />
-                <Divider />
+                {/* <FAQ /> */}
+                {/* <Divider /> */}
+                <CallToAction /> 
                 <Footer />
             </Box>
         </ThemeProvider>

@@ -100,7 +100,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                             >
                                 Pricing
                             </Button> */}
-                            <Button
+                            {/* <Button
                                 variant="text"
                                 color="info"
                                 size="small"
@@ -108,7 +108,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                                 sx={{ minWidth: 0 }}
                             >
                                 FAQ
-                            </Button>
+                            </Button> */}
                         </Box>
                     </Box>
                     <Box
@@ -173,13 +173,13 @@ function AppAppBar({ mode, toggleColorMode }) {
                                 {/* <MenuItem onClick={() => scrollToSection('pricing')}>
                                     Pricing
                                 </MenuItem> */}
-                                <MenuItem onClick={() => scrollToSection('faq')}
+                                {/* <MenuItem onClick={() => scrollToSection('faq')}
                                     sx={{
                                         borderRadius: '15px'
                                     }}
                                 >
                                     FAQ
-                                </MenuItem>
+                                </MenuItem> */}
                                 {/* <MenuItem>
                                     <Button color="primary" variant="contained" fullWidth>
                                         Sign up

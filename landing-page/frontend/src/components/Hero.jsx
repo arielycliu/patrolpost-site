@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
@@ -49,6 +50,57 @@ const ImageBox = styled('div')(({ theme }) => ({
     }
 }));
 
+const AnimatedText = () => {
+    const texts = [
+        'For Schools',
+        'For Hospitals',
+        'For Construction Sites',
+        'For Everything'
+    ];
+
+    const [currentText, setCurrentText] = useState(texts[0]);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCurrentText(prev => {
+                const currentIndex = texts.indexOf(prev);
+                const nextIndex = (currentIndex + 1) % texts.length;
+                return texts[nextIndex];
+            });
+        }, 1500);
+
+        // Clear interval on component unmount
+        return () => clearInterval(intervalId);
+    }, []);
+
+    return (
+        <Typography
+            variant="h6"
+            sx={{
+                display: 'flex',
+                flexDirection: { xs: 'column', sm: 'row' },
+                alignItems: {
+                    sm: 'center',
+                    md: 'flex-start',
+                },
+                fontSize: {
+                    xs: '0.5rem',
+                    sm: '1rem',
+                    md: '1.5rem',
+                },
+                background: 'linear-gradient(to right, #7db8ff, #957dff)', 
+                WebkitBackgroundClip: 'text', 
+                WebkitTextFillColor: 'transparent', 
+                backgroundClip: 'text', 
+                color: '#7dc7ff',
+                transition: 'opacity 0.5s ease-in-out', 
+            }}
+        >
+            {currentText}
+        </Typography>
+    );
+};
+
 export default function Hero() {
     return (
         <Box
@@ -82,13 +134,15 @@ export default function Hero() {
                 <Stack
                     spacing={2}
                     useFlexGap
-                    sx={{ 
+                    sx={{
                         alignItems: {
                             sm: 'center',
                             md: 'flex-start'
                         },
-                        width: { xs: '100%', sm: '70%' } }}
+                        width: { xs: '100%', sm: '70%' }
+                    }}
                 >
+                    <AnimatedText /> 
                     <Typography
                         variant="h1"
                         sx={{
@@ -188,11 +242,11 @@ export default function Hero() {
                             }}
                         />
                         <Button variant="contained" color="primary" sx={{
-                                ml: {
-                                    xs: 0,
-                                    sm: -10
-                                }
-                            }}>
+                            ml: {
+                                xs: 0,
+                                sm: -10
+                            }
+                        }}>
                             Get a demo
                         </Button>
                     </Stack>

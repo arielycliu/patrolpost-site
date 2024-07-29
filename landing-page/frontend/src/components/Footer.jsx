@@ -18,52 +18,52 @@ import TwitterIcon from '@mui/icons-material/X';
 import WatchdogIcon from './WatchdogIcon';
 
 function Copyright() {
-  return (
-    <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
-      {'Copyright © '}
-      <Link href="">WatchDog&nbsp;</Link>
-      {new Date().getFullYear()}
-    </Typography>
-  );
+    return (
+        <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
+            {'Copyright © '}
+            <Link href="">WatchDog&nbsp;</Link>
+            {new Date().getFullYear()}
+        </Typography>
+    );
 }
 
 export default function Footer() {
-  return (
-    <Container
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: { xs: 4, sm: 8 },
-        py: { xs: 8, sm: 10 },
-        textAlign: { sm: 'center', md: 'left' },
-      }}
-    >
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', sm: 'row' },
-          width: '100%',
-          justifyContent: 'space-between',
-        }}
-      >
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 4,
-            minWidth: { xs: '100%', sm: '60%' },
-          }}
+    return (
+        <Container
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: { xs: 4, sm: 8 },
+                py: { xs: 8, sm: 10 },
+                textAlign: { sm: 'center', md: 'left' },
+            }}
         >
-          <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
-            <WatchdogIcon />
-            <Typography variant="body2" gutterBottom sx={{ fontWeight: 600, mt: 2 }}>
-              Join the newsletter
-            </Typography>
-            <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
-              Subscribe for weekly updates. No spams ever!
-            </Typography>
-            <Stack direction="row" spacing={1} useFlexGap>
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexDirection: { xs: 'column', sm: 'row' },
+                    width: '100%',
+                    justifyContent: 'space-between',
+                }}
+            >
+                <Box
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: 4,
+                        minWidth: { xs: '100%', sm: '60%' },
+                    }}
+                >
+                    <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
+                        <WatchdogIcon />
+                        <Typography variant="body2" gutterBottom sx={{ fontWeight: 600, mt: 2 }}>
+                            Leading the Future of Remote Surveillance
+                        </Typography>
+                        <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
+                            Top-notch remote monitoring solutions for schools, hospitals, construction sites, and more.
+                        </Typography>
+                        {/* <Stack direction="row" spacing={1} useFlexGap>
               <InputLabel htmlFor="email-newsletter" sx={visuallyHidden}>
                 Email
               </InputLabel>
@@ -83,79 +83,73 @@ export default function Footer() {
                 }}
               />
               <Button variant="contained" color="primary" sx={{ flexShrink: 0 }}>
-                Subscribe
+                Get a demo
               </Button>
-            </Stack>
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            display: { xs: 'none', sm: 'flex' },
-            flexDirection: 'column',
-            gap: 1,
-          }}
-        >
-          <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
-            Product
-          </Typography>
-          <Link color="text.secondary" variant="body2" href="#">
-            Features
-          </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            Use Cases
-          </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            Highlights
-          </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            Pricing
-          </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            FAQs
-          </Link>
-        </Box>
-        <Box
-          sx={{
-            display: { xs: 'none', sm: 'flex' },
-            flexDirection: 'column',
-            gap: 1,
-          }}
-        >
-          <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
-            Company
-          </Typography>
-          <Link color="text.secondary" variant="body2" href="#">
-            About us
-          </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            Careers
-          </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            Press
-          </Link>
-        </Box>
-        <Box
-          sx={{
-            display: { xs: 'none', sm: 'flex' },
-            flexDirection: 'column',
-            gap: 1,
-          }}
-        >
-          <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
-            Legal
-          </Typography>
-          <Link color="text.secondary" variant="body2" href="#">
-            Terms
-          </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            Privacy
-          </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            Contact
-          </Link>
-        </Box>
-      </Box>
-      <Box
+            </Stack> */}
+                    </Box>
+                </Box>
+                <Box
+                    sx={{
+                        display: { xs: 'none', sm: 'flex' },
+                        flexDirection: 'column',
+                        gap: 1,
+                    }}
+                >
+                    <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
+                        Pages
+                    </Typography>
+                    <Link color="text.secondary" variant="body2" href="#">
+                        Features
+                    </Link>
+                    <Link color="text.secondary" variant="body2" href="#">
+                        Highlights
+                    </Link>
+                    <Link color="text.secondary" variant="body2" href="#">
+                        Use Cases
+                    </Link>
+                </Box>
+                <Box
+                    sx={{
+                        display: { xs: 'none', sm: 'flex' },
+                        flexDirection: 'column',
+                        gap: 1,
+                    }}
+                >
+                    <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
+                        Contact Us
+                    </Typography>
+                    <Link color="text.secondary" variant="body2" href="#">
+                        info@watchdog.com
+                    </Link>
+                    <Link color="text.secondary" variant="body2" href="#">
+                        (802) 415 - 1896
+                    </Link>
+                    <Link color="text.secondary" variant="body2" href="#">
+                        @watchdog
+                    </Link>
+                </Box>
+                <Box
+                    sx={{
+                        display: { xs: 'none', sm: 'flex' },
+                        flexDirection: 'column',
+                        gap: 1,
+                    }}
+                >
+                    <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
+                        Follow Us
+                    </Typography>
+                    <Link color="text.secondary" variant="body2" href="#">
+                        Facebook
+                    </Link>
+                    <Link color="text.secondary" variant="body2" href="#">
+                        Instagram
+                    </Link>
+                    <Link color="text.secondary" variant="body2" href="#">
+                        Twitter
+                    </Link>
+                </Box>
+            </Box>
+            {/* <Box
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -165,18 +159,6 @@ export default function Footer() {
           borderColor: 'divider',
         }}
       >
-        <div>
-          <Link color="text.secondary" variant="body2" href="#">
-            Privacy Policy
-          </Link>
-          <Typography sx={{ display: 'inline', mx: 0.5, opacity: 0.5 }}>
-            &nbsp;•&nbsp;
-          </Typography>
-          <Link color="text.secondary" variant="body2" href="#">
-            Terms of Service
-          </Link>
-          <Copyright />
-        </div>
         <Stack
           direction="row"
           spacing={1}
@@ -208,7 +190,7 @@ export default function Footer() {
             <LinkedInIcon />
           </IconButton>
         </Stack>
-      </Box>
-    </Container>
-  );
+      </Box> */}
+        </Container>
+    );
 }
