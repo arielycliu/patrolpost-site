@@ -113,6 +113,7 @@ export default function Features() {
           >
             <Box
               sx={(theme) => ({
+                mb: 2,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 minHeight: 280,
@@ -285,9 +286,11 @@ export default function Features() {
             <Box
               sx={(theme) => ({
                 m: 'auto',
-                width: 420,
-                height: 500,
-                backgroundSize: 'contain',
+                minWidth: 420,
+                minHeight: 500,
+                width: '100%',
+                height: '100%',
+                backgroundSize: 'cover',
                 backgroundImage: 'var(--items-imageLight)',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',

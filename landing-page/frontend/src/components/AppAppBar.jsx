@@ -14,7 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ToggleColorMode from './ToggleColorMode';
 
-import WatchdogIcon from './WatchdogIcon';
+import WatchdogLogo from './WatchdogLogo';
 
 function AppAppBar({ mode, toggleColorMode }) {
     const [open, setOpen] = React.useState(false);
@@ -66,7 +66,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                     })}
                 >
                     <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-                        <WatchdogIcon />
+                        <WatchdogLogo />
                         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                             <Button
                                 variant="text"
@@ -91,6 +91,14 @@ function AppAppBar({ mode, toggleColorMode }) {
                                 onClick={() => scrollToSection('usecases')}
                             >
                                 Use Cases
+                            </Button>
+                            <Button
+                                variant="text"
+                                color="info"
+                                size="small"
+                                onClick={() => scrollToSection('signup')}
+                            >
+                                Sign Up
                             </Button>
                             {/* <Button
                                 variant="text"
@@ -169,6 +177,13 @@ function AppAppBar({ mode, toggleColorMode }) {
                                     }}
                                 >
                                     Use Cases
+                                </MenuItem>
+                                <MenuItem onClick={() => scrollToSection('signup')}
+                                    sx={{
+                                        borderRadius: '15px'
+                                    }}
+                                >
+                                    Sign Up
                                 </MenuItem>
                                 {/* <MenuItem onClick={() => scrollToSection('pricing')}>
                                     Pricing

@@ -14,12 +14,18 @@ import { styled } from '@mui/material/styles';
 export default function CallToAction() {
     return (
         <Container
+            id="signup"
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 pt: { xs: 14, sm: 14, md: 10 },
-                pb: { xs: 8, sm: 12, md: 0 },
+                pb: { xs: 8, sm: 12, md: 10 },
+                mt: 10,
+                mb: 10,
+                color: 'white',
+                bgcolor: 'hsl(220, 30%, 2%)',
+                borderRadius: { sm: 0, md: '25px'}
             }}
         >
             <Stack
@@ -31,8 +37,9 @@ export default function CallToAction() {
             >
                 <Typography
                     variant="h4"
+                    sx={{ textAlign: 'center' }}
                 >
-                    Experience&nbsp;the&nbsp;
+                    Experience the&#32;
                     <Typography
                         component="span"
                         variant="h1"
@@ -44,7 +51,7 @@ export default function CallToAction() {
                             }),
                         })}
                     >
-                        Watchdog&nbsp;
+                        Watchdog&#32;
                     </Typography>
                     advantage
                 </Typography>
@@ -52,7 +59,7 @@ export default function CallToAction() {
                 <Typography
                     sx={{
                         textAlign: 'center',
-                        color: 'text.secondary',
+                        color: 'white',
                         width: { sm: '100%', md: '80%' },
                     }}
                 >
@@ -61,7 +68,7 @@ export default function CallToAction() {
                 <Typography
                     sx={{
                         textAlign: 'center',
-                        color: 'text.secondary',
+                        color: 'white',
                         width: { sm: '100%', md: '80%' },
                         mt: -1.5
                     }}
@@ -101,6 +108,15 @@ export default function CallToAction() {
                             htmlInput: {
                                 autoComplete: 'off',
                                 'aria-label': 'Enter your email address',
+                            },
+                        }}
+                        sx={{
+                            color: 'white',
+                            '& .MuiInputBase-input': {
+                                color: 'white',
+                            },
+                            '& .MuiInputBase-input::placeholder': {
+                                color: 'white',
                             },
                         }}
                     />

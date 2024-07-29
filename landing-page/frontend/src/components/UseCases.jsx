@@ -72,13 +72,17 @@ export default function UseCases() {
                 {dataUseCases.map((usecase, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: 'flex' }}>
                         <Card
-                            sx={{
+                            sx={(theme) => ({
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'space-between',
                                 flexGrow: 1,
                                 p: 1,
-                            }}
+                                transition: 'outline 0.3s ease',
+                                '&:hover': {
+                                    outline: `1px solid ${theme.palette.text.primary}`,
+                                },
+                            })}
                         >
                             <CardContent>
                                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>

@@ -88,7 +88,7 @@ const AnimatedText = () => {
                     sm: '1rem',
                     md: '1.5rem',
                 },
-                background: 'linear-gradient(to right, #7db8ff, #957dff)', 
+                background: 'linear-gradient(to right, #8adaff, #6e8ffa)', 
                 WebkitBackgroundClip: 'text', 
                 WebkitTextFillColor: 'transparent', 
                 backgroundClip: 'text', 

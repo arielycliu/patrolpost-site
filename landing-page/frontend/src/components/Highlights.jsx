@@ -105,6 +105,13 @@ export default function Highlights() {
                                     background: 'transparent',
                                     backgroundColor: 'grey.900',
                                     boxShadow: 'none',
+                                    transition: 'outline 0.6s ease',
+                                    '&:hover': {
+                                        outline: `1px solid hsl(220, 25%, 10%)`,
+                                    },
+                                    '&:active': {
+                                        outline: `1px solid hsl(220, 25%, 10%)`,
+                                    },
                                 }}
                             >
                                 <Box sx={{ opacity: '50%' }}>{item.icon}</Box>

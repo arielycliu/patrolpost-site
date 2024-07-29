@@ -97,8 +97,8 @@ export default function LandingPage() {
                 {/* <Pricing /> */}
                 {/* <Divider /> */}
                 {/* <FAQ /> */}
-                {/* <Divider /> */}
                 <CallToAction /> 
+                <Divider />
                 <Footer />
             </Box>
         </ThemeProvider>
