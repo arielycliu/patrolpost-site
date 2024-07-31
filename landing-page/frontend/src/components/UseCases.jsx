@@ -97,7 +97,6 @@ export default function UseCases() {
                                     minWidth: 200,
                                     backgroundImage: 'var(--usecase-img)',
                                     backgroundRepeat: 'no-repeat',
-                                    backgroundPosition: 'center',
                                     borderRadius: 0.8
                                 })}
                                 style={{
