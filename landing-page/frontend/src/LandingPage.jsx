@@ -18,8 +18,6 @@ import UseCases from './components/UseCases';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import getLPTheme from './getLPTheme';
-import '@fontsource-variable/open-sans' // paragraph
-import '@fontsource-variable/readex-pro' // headings
 import CallToAction from './components/CallToAction';
 import HeroVideo from './components/HeroVideo';
 
