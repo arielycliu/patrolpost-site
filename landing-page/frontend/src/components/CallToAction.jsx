@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography';
 
 import { visuallyHidden } from '@mui/utils';
 import { styled } from '@mui/material/styles';
+import DemoInputCTA from './DemoInputCTA';
 
 export default function CallToAction() {
     return (
@@ -88,47 +89,7 @@ export default function CallToAction() {
                     </Typography>
                     and discover the future of remote monitoring.
                 </Typography>
-                <Stack
-                    direction={{ xs: 'column', sm: 'row' }}
-                    spacing={1}
-                    useFlexGap
-                    sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
-                >
-                    <InputLabel htmlFor="email-hero" sx={visuallyHidden}>
-                        Email
-                    </InputLabel>
-                    <TextField
-                        id="email-hero"
-                        hiddenLabel
-                        size="small"
-                        variant="outlined"
-                        aria-label="Enter your email address"
-                        placeholder="Your email address"
-                        slotProps={{
-                            htmlInput: {
-                                autoComplete: 'off',
-                                'aria-label': 'Enter your email address',
-                            },
-                        }}
-                        sx={{
-                            color: 'white',
-                            '& .MuiInputBase-input': {
-                                color: 'white',
-                            },
-                            '& .MuiInputBase-input::placeholder': {
-                                color: 'white',
-                            },
-                        }}
-                    />
-                    <Button variant="contained" color="primary" sx={{
-                            ml: {
-                                xs: 0,
-                                sm: -10
-                            }
-                        }}>
-                        Reach out!
-                    </Button>
-                </Stack>
+                <DemoInputCTA />
             </Stack>
         </Container>
     );

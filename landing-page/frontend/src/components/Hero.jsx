@@ -78,7 +78,7 @@ const AnimatedText = () => {
             variant="h6"
             sx={{
                 display: 'flex',
-                flexDirection: { xs: 'column', sm: 'row' },
+                flexDirection: { xs: 'column', sm: 'row', md: 'row' },
                 alignItems: {
                     sm: 'center',
                     md: 'flex-start',
@@ -128,7 +128,7 @@ export default function Hero() {
                         md: 'left'
                     },
                     pt: { xs: 14, sm: 14, md: 0 },
-                    pb: { xs: 8, sm: 12, md: 0 },
+                    pb: { xs: 8, sm: 12, md: 0 }
                 }}
             >
                 <Stack

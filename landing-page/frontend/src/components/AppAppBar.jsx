@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
@@ -13,14 +13,21 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ToggleColorMode from './ToggleColorMode';
-
 import WatchdogLogo from './WatchdogLogo';
+import DemoForm from './DemoForm';
 
 function AppAppBar({ mode, toggleColorMode }) {
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
+    const [email, setEmail] = useState('');
+
+    const handleOpen = () => setOpen(true);
+    
+    const handleClose = () => setOpen(false);
+    
+    const [openDrawer, setOpenDrawer] = React.useState(false);
 
     const toggleDrawer = (newOpen) => () => {
-        setOpen(newOpen);
+        setOpenDrawer(newOpen);
     };
 
     const scrollToSection = (sectionId) => {
@@ -33,7 +40,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 top: targetScroll,
                 behavior: 'smooth',
             });
-            setOpen(false);
+            setOpenDrawer(false);
         }
     };
 
@@ -100,23 +107,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                             >
                                 Sign Up
                             </Button>
-                            {/* <Button
-                                variant="text"
-                                color="info"
-                                size="small"
-                                onClick={() => scrollToSection('pricing')}
-                            >
-                                Pricing
-                            </Button> */}
-                            {/* <Button
-                                variant="text"
-                                color="info"
-                                size="small"
-                                onClick={() => scrollToSection('faq')}
-                                sx={{ minWidth: 0 }}
-                            >
-                                FAQ
-                            </Button> */}
+                            
                         </Box>
                     </Box>
                     <Box
@@ -131,10 +122,8 @@ function AppAppBar({ mode, toggleColorMode }) {
                             mode={mode}
                             toggleColorMode={toggleColorMode}
                         />
-                        {/* <Button color="primary" variant="text" size="small">
-                            Sign in
-                        </Button> */}
-                        <Button color="primary" variant="contained" size="small">
+                        
+                        <Button onClick={handleOpen} color="primary" variant="contained" size="small">
                             Get a demo
                         </Button>
                     </Box>
@@ -142,7 +131,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                         <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
                             <MenuIcon />
                         </IconButton>
-                        <Drawer anchor="top" open={open} onClose={toggleDrawer(false)}>
+                        <Drawer anchor="top" open={openDrawer} onClose={toggleDrawer(false)}>
                             <Box sx={{ p: 2, backgroundColor: 'background.default' }}>
                                 <Box
                                     sx={{
@@ -185,21 +174,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                                 >
                                     Sign Up
                                 </MenuItem>
-                                {/* <MenuItem onClick={() => scrollToSection('pricing')}>
-                                    Pricing
-                                </MenuItem> */}
-                                {/* <MenuItem onClick={() => scrollToSection('faq')}
-                                    sx={{
-                                        borderRadius: '15px'
-                                    }}
-                                >
-                                    FAQ
-                                </MenuItem> */}
-                                {/* <MenuItem>
-                                    <Button color="primary" variant="contained" fullWidth>
-                                        Sign up
-                                    </Button>
-                                </MenuItem> */}
+                                
                                 <MenuItem
                                 sx={{
                                     '&:hover': {
@@ -207,15 +182,17 @@ function AppAppBar({ mode, toggleColorMode }) {
                                     },
                                 }}
                                 >
-                                    <Button color="primary" variant="contained" halfWidth>
+                                    <Button onClick={handleOpen} color="primary" variant="contained" halfWidth>
                                         Get a demo
                                     </Button>
                                 </MenuItem>
+
                             </Box>
                         </Drawer>
                     </Box>
                 </Toolbar>
             </Container>
+            <DemoForm open={open} handleClose={handleClose} email={email} setEmail={setEmail} />
         </AppBar>
     );
 }

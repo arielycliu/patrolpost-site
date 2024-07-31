@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 
 import { visuallyHidden } from '@mui/utils';
 import { styled } from '@mui/material/styles';
+import DemoInput from './DemoInput';
 
 const StyledBox = styled('div')(({ theme }) => ({
     alignSelf: 'center',
@@ -76,25 +77,29 @@ const AnimatedText = () => {
     return (
         <Typography
             variant="h6"
-            sx={{
+            sx={(theme) => ({
                 display: 'flex',
+                fontWeight: '700',
                 flexDirection: { xs: 'column', sm: 'row' },
                 alignItems: {
                     sm: 'center',
                     md: 'flex-start',
                 },
                 fontSize: {
-                    xs: '0.5rem',
-                    sm: '1rem',
+                    xs: '1.3rem',
+                    sm: '1.5rem',
                     md: '1.5rem',
                 },
-                background: 'linear-gradient(to right, #8adaff, #6e8ffa)', 
+                background: 'linear-gradient(to right, #05b0ff, #033dfc)', 
                 WebkitBackgroundClip: 'text', 
                 WebkitTextFillColor: 'transparent', 
                 backgroundClip: 'text', 
                 color: '#7dc7ff',
                 transition: 'opacity 0.5s ease-in-out', 
-            }}
+                ...theme.applyStyles('dark', {
+                    background: 'linear-gradient(to right, #8adaff, #6e8ffa)'
+                }),
+            })}
         >
             {currentText}
         </Typography>
@@ -134,10 +139,12 @@ export default function HeroVideo() {
                 sx={{
                     display: 'flex',
                     flexDirection: {
+                        xs: 'column',
                         sm: 'column',
                         md: 'row'
                     },
                     alignItems: {
+                        xs: 'center',
                         sm: 'center',
                         md: 'left'
                     },
@@ -150,6 +157,7 @@ export default function HeroVideo() {
                     useFlexGap
                     sx={{
                         alignItems: {
+                            xs: 'center',
                             sm: 'center',
                             md: 'flex-start'
                         },
@@ -161,8 +169,9 @@ export default function HeroVideo() {
                         variant="h1"
                         sx={{
                             display: 'flex',
-                            flexDirection: { xs: 'column', sm: 'row' },
+                            flexDirection: { xs: 'row', sm: 'row' },
                             alignItems: {
+                                xs: 'center',
                                 sm: 'center',
                                 md: 'flex-start'
                             },
@@ -192,8 +201,9 @@ export default function HeroVideo() {
                         variant="h1"
                         sx={{
                             display: 'flex',
-                            flexDirection: { xs: 'column', sm: 'row' },
+                            flexDirection: { xs: 'row', sm: 'row' },
                             alignItems: {
+                                xs: 'center',
                                 sm: 'center',
                                 md: 'flex-start'
                             },
@@ -222,6 +232,7 @@ export default function HeroVideo() {
                     <Typography
                         sx={{
                             textAlign: {
+                                xs: 'center',
                                 sm: 'center',
                                 md: 'left'
                             },
@@ -232,38 +243,7 @@ export default function HeroVideo() {
                         WatchDog provides top-notch remote monitoring solutions for schools, hospitals, construction sites, and more.
                         Our state-of-the-art technology ensures you have eyes everywhere, anytime, and with unprecedented ease and reliability.
                     </Typography>
-                    <Stack
-                        direction={{ xs: 'column', sm: 'row' }}
-                        spacing={1}
-                        useFlexGap
-                        sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
-                    >
-                        <InputLabel htmlFor="email-hero" sx={visuallyHidden}>
-                            Email
-                        </InputLabel>
-                        <TextField
-                            id="email-hero"
-                            hiddenLabel
-                            size="small"
-                            variant="outlined"
-                            aria-label="Enter your email address"
-                            placeholder="Your email address"
-                            slotProps={{
-                                htmlInput: {
-                                    autoComplete: 'off',
-                                    'aria-label': 'Enter your email address',
-                                },
-                            }}
-                        />
-                        <Button variant="contained" color="primary" sx={{
-                            ml: {
-                                xs: 0,
-                                sm: -10
-                            }
-                        }}>
-                            Get a demo
-                        </Button>
-                    </Stack>
+                    <DemoInput />
                     {/* <Typography variant="caption" sx={{ textAlign: 'center' }}>
                         We will be in contact in 2-3&nbsp;
                         <Link href="#" color="primary">
@@ -275,19 +255,6 @@ export default function HeroVideo() {
                 <ImageBox id="image" />
             </Container>
             <Container
-                sx={{
-                    display: 'flex',
-                    flexDirection: {
-                        sm: 'column',
-                        md: 'row'
-                    },
-                    alignItems: {
-                        sm: 'center',
-                        md: 'left'
-                    },
-                    pt: { xs: 14, sm: 14, md: 0 },
-                    pb: { xs: 8, sm: 12, md: 0 }
-                }}
             >
                 <StyledBox />
             </Container>
