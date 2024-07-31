@@ -102,6 +102,7 @@ function DemoForm({ open, handleClose, email, setEmail }) {
                             fullWidth
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
+                            type="phone"
                         />
 
                         <TextField
