@@ -71,7 +71,7 @@ function DemoForm({ open, handleClose, email, setEmail }) {
                         alignItems: 'left'
                     }}>
                         <Typography id="modal-title" variant="h6" component="h2">
-                            Demo Request
+                            Ready to secure your property?
                         </Typography>
 
                         <TextField

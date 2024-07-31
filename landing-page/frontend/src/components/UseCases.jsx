@@ -27,15 +27,15 @@ const dataUseCases = [
     },
     // {
     //     usecase:
-    //         "Enhance your store's security and operational efficiency with WatchDog. Our surveillance systems can monitor customer activity, manage inventory, and detect potential security breaches. The intuitive dashboard and AI capabilities provide actionable insights, helping you optimize store operations and improve the shopping experience.",
+    //         "Enhance your store's security and operational efficiency with PatrolPost. Our surveillance systems can monitor customer activity, manage inventory, and detect potential security breaches. The intuitive dashboard and AI capabilities provide actionable insights, helping you optimize store operations and improve the shopping experience.",
     // },
     // {
     //     usecase:
-    //         "Streamline your warehouse operations and ensure safety with WatchDog’s remote surveillance. Monitor loading docks, storage areas, and internal operations from anywhere. Our system’s 24/7 recording and advanced detection features help safeguard against theft, ensure compliance with safety regulations, and streamline inventory management.",
+    //         "Streamline your warehouse operations and ensure safety with PatrolPost’s remote surveillance. Monitor loading docks, storage areas, and internal operations from anywhere. Our system’s 24/7 recording and advanced detection features help safeguard against theft, ensure compliance with safety regulations, and streamline inventory management.",
     // },
     // {
     //     usecase:
-    //         "Safeguard public areas such as parks, transit hubs, and recreational centers with WatchDog. Our mobile surveillance units offer flexible deployment and comprehensive monitoring capabilities. With features like geofencing and intrusion detection, you can enhance public safety and respond swiftly to incidents, creating a secure environment for everyone.",
+    //         "Safeguard public areas such as parks, transit hubs, and recreational centers with PatrolPost. Our mobile surveillance units offer flexible deployment and comprehensive monitoring capabilities. With features like geofencing and intrusion detection, you can enhance public safety and respond swiftly to incidents, creating a secure environment for everyone.",
     // },
 ];
 
@@ -65,7 +65,7 @@ export default function UseCases() {
                     Empowering Across Industries
                 </Typography>
                 <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-                    No matter the industry, WatchDog’s innovative solutions provide peace of mind and enhance security with advanced technology and seamless integration.
+                    No matter the industry, PatrolPost’s innovative solutions provide peace of mind and enhance security with advanced technology and seamless integration.
                 </Typography>
             </Box>
             <Grid container spacing={2}>

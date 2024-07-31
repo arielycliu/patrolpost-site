@@ -13,7 +13,7 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ToggleColorMode from './ToggleColorMode';
-import WatchdogLogo from './WatchdogLogo';
+import PatrolPostLogo from './PatrolPostLogo';
 import DemoForm from './DemoForm';
 
 function AppAppBar({ mode, toggleColorMode }) {
@@ -73,7 +73,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                     })}
                 >
                     <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-                        <WatchdogLogo />
+                        <PatrolPostLogo />
                         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                             <Button
                                 variant="text"
