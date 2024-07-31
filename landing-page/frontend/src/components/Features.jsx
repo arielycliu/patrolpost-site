@@ -119,7 +119,6 @@ export default function Features() {
                 minHeight: 280,
                 backgroundImage: 'var(--items-imageLight)',
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
                 ...theme.applyStyles('dark', {
                   backgroundImage: 'var(--items-imageDark)',
                 }),
