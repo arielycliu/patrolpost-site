@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useForm } from '@formspree/react';
+import { useForm, ValidationError } from '@formspree/react';
 import {
     Modal, Stack, TextField, Select, MenuItem, InputLabel, FormControl, Button, Typography, Box, Link
 } from '@mui/material';
@@ -108,10 +108,11 @@ function DemoForm({ open, handleClose, email, setEmail }) {
                             required
                             type="email"
                         />
+                        <ValidationError field="email" prefix="Email" errors={state.errors} />
 
                         <TextField
                             label="Phone number"
-                            name="phone number"
+                            name="phone"
                             size="small"
                             variant="outlined"
                             fullWidth
@@ -130,15 +131,25 @@ function DemoForm({ open, handleClose, email, setEmail }) {
                             onChange={(e) => setIndustry(e.target.value)}
                         />
 
+                        <TextField
+                            label="Company size (rough estimate)"
+                            name="companySize"
+                            size="small"
+                            variant="outlined"
+                            fullWidth
+                            value={companySize}
+                            onChange={(e) => setCompanySize(e.target.value)}
+                        />
+
                             
-                        <FormControl fullWidth size="small">
+                        {/* <FormControl fullWidth size="small">
                             <InputLabel id="company-size-label">Company Size</InputLabel>
                             <Select
                                 labelId="company-size-label"
                                 value={companySize}
                                 onChange={(e) => setCompanySize(e.target.value)}
-                                label="Company Size"
-                                name="company size"
+                                label="CompanySize"
+                                name="companySize"
                             >
                                 <MenuItem value="1-10">1-10</MenuItem>
                                 <MenuItem value="11-50">11-50</MenuItem>
@@ -146,7 +157,7 @@ function DemoForm({ open, handleClose, email, setEmail }) {
                                 <MenuItem value="201-500">201-500</MenuItem>
                                 <MenuItem value="500+">500+</MenuItem>
                             </Select>
-                        </FormControl>
+                        </FormControl> */}
 
                         <Button type="submit" disabled={state.submitting} variant="contained" color="primary" sx={{ 
                             mt: 2,
