@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useForm } from '@formspree/react';
 import {
-    Modal, Stack, TextField, Select, MenuItem, InputLabel, FormControl, Button, Typography, Box
+    Modal, Stack, TextField, Select, MenuItem, InputLabel, FormControl, Button, Typography, Box, Link
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -9,20 +10,29 @@ function DemoForm({ open, handleClose, email, setEmail }) {
     const [companySize, setCompanySize] = useState('');
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
+    const [submitModal, setSubmitModal] = useState(false);
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        // Handle form submission logic here
-        console.log({
-            industry,
-            companySize,
-            name,
-            email,
-            phone,
-        });
-    };
+    const [state, handleSubmit, reset] = useForm('xnnadvnb');
+
+    const handleCloseSubmitted = () => {
+        setSubmitModal(false);
+        handleClose();
+    }
+
+    useEffect(() => {
+        if (state.succeeded) {
+            setSubmitModal(true);
+        }
+    }, [state.succeeded]);
+
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
+    //     // Handle form submission logic here
+    //     setSubmitted(true);
+    // };
 
     return (
+        <>
         <Modal
             open={open}
             onClose={handleClose}
@@ -63,7 +73,9 @@ function DemoForm({ open, handleClose, email, setEmail }) {
                 }} onClick={handleClose}>
                     <CloseIcon />
                 </Box>
-                <form onSubmit={handleSubmit}>
+                <form
+                    onSubmit={handleSubmit}
+                >
                     <Stack spacing={2} sx={{ 
                         width: '100%',
                         display: 'flex',
@@ -76,6 +88,7 @@ function DemoForm({ open, handleClose, email, setEmail }) {
 
                         <TextField
                             label="Name"
+                            name="name"
                             size="small"
                             variant="outlined"
                             fullWidth
@@ -86,6 +99,7 @@ function DemoForm({ open, handleClose, email, setEmail }) {
 
                         <TextField
                             label="Email"
+                            name="email"
                             size="small"
                             variant="outlined"
                             fullWidth
@@ -97,6 +111,7 @@ function DemoForm({ open, handleClose, email, setEmail }) {
 
                         <TextField
                             label="Phone number"
+                            name="phone number"
                             size="small"
                             variant="outlined"
                             fullWidth
@@ -107,6 +122,7 @@ function DemoForm({ open, handleClose, email, setEmail }) {
 
                         <TextField
                             label="Industry"
+                            name="industry"
                             size="small"
                             variant="outlined"
                             fullWidth
@@ -122,6 +138,7 @@ function DemoForm({ open, handleClose, email, setEmail }) {
                                 value={companySize}
                                 onChange={(e) => setCompanySize(e.target.value)}
                                 label="Company Size"
+                                name="company size"
                             >
                                 <MenuItem value="1-10">1-10</MenuItem>
                                 <MenuItem value="11-50">11-50</MenuItem>
@@ -131,7 +148,7 @@ function DemoForm({ open, handleClose, email, setEmail }) {
                             </Select>
                         </FormControl>
 
-                        <Button type="submit" variant="contained" color="primary" sx={{ 
+                        <Button type="submit" disabled={state.submitting} variant="contained" color="primary" sx={{ 
                             mt: 2,
                             width: 'fit-content'
                         }}>
@@ -142,6 +159,80 @@ function DemoForm({ open, handleClose, email, setEmail }) {
 
             </Box>
         </Modal>
+        <Modal
+            open={submitModal}
+            onClose={handleCloseSubmitted}
+            aria-labelledby="modal-title"
+            aria-describedby="modal-description"
+        >
+            <Box
+                sx={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: {
+                        xs: '90%',
+                        sm: '70%',
+                        md: '40%'
+                    },
+                    bgcolor: 'background.paper',
+                    borderRadius: '12px',
+                    boxShadow: 24,
+                    p: 4,
+                }}
+            >
+                <Box sx={{ 
+                    position: 'absolute', top: 16, right: 16,
+                    borderRadius: '20px',
+                    width: 'fit-content',
+                    height: 'fit-content',
+                    p: '5px',
+                    m: '0',
+                    display: 'flex',
+                    alignContent: 'center',
+                    justifyContent: 'center',
+                    '&:hover': {
+                        backgroundColor: 'hsl(220, 35%, 88%)',
+                        cursor: 'pointer'
+                    }
+                }} onClick={handleCloseSubmitted}>
+                    <CloseIcon />
+                </Box>
+                
+                <Typography variant="h6" sx={(theme) => ({
+                    fontWeight: '700',
+                    alignSelf: 'center',
+                    fontSize: {
+                        xs: '1.3rem',
+                        sm: '1.5rem',
+                        md: '1.5rem',
+                    },
+                    background: 'linear-gradient(to right, #05b0ff, #033dfc)', 
+                    WebkitBackgroundClip: 'text', 
+                    WebkitTextFillColor: 'transparent', 
+                    backgroundClip: 'text', 
+                    color: '#7dc7ff',
+                    transition: 'opacity 0.5s ease-in-out', 
+                    ...theme.applyStyles('dark', {
+                        background: 'linear-gradient(to right, #8adaff, #6e8ffa)'
+                    })
+                })}>
+                    Submitted!
+                </Typography>
+                <Typography>
+                Thank you for your interest! A member of our sales team will reach out to you within 1-3 business days.
+                </Typography>
+                <Typography sx={{ mt: 1 }}>
+                If you have any immediate questions, feel free to contact us at{' '}
+                <Link href="mailto:info@patrolpost.com" color="inherit">
+                    info@patrolpost.com
+                </Link>.
+                </Typography>
+
+            </Box>
+        </Modal>
+        </>
     );
 }
 
