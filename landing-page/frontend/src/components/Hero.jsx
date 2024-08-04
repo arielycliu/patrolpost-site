@@ -8,6 +8,7 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import DemoInput from './DemoInput';
 
 import { visuallyHidden } from '@mui/utils';
 import { styled } from '@mui/material/styles';
@@ -197,7 +198,8 @@ export default function Hero() {
                         PatrolPost provides top-notch remote monitoring solutions for schools, hospitals, construction sites, and more.
                         Our state-of-the-art technology ensures you have eyes everywhere, anytime, and with unprecedented ease and reliability.
                     </Typography>
-                    <Stack
+                    <DemoInput />
+                    {/* <Stack
                         direction={{ xs: 'column', sm: 'row' }}
                         spacing={1}
                         useFlexGap
@@ -227,7 +229,7 @@ export default function Hero() {
                             }
                         }}>
                             Get a demo
-                        </Button>
+                        </Button> */}
                     </Stack>
                     {/* <Typography variant="caption" sx={{ textAlign: 'center' }}>
                         We will be in contact in 2-3&nbsp;
@@ -236,7 +238,7 @@ export default function Hero() {
                         </Link>
                         .
                     </Typography> */}
-                </Stack>
+                {/* </Stack> */}
                 <ImageBox id="image" />
             </Container>
         </Box>
