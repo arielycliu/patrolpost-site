@@ -16,6 +16,10 @@ import CameraAltRoundedIcon from '@mui/icons-material/CameraAltRounded';
 import SolarPowerRoundedIcon from '@mui/icons-material/SolarPowerRounded';
 import FastForwardRoundedIcon from '@mui/icons-material/FastForwardRounded';
 import InventoryRoundedIcon from '@mui/icons-material/InventoryRounded';
+import thermal from '../assets/thermal.png';
+import solar from '../assets/solar.png';
+import deploy from '../assets/deploy.png';
+import iso from '../assets/iso.png';
 
 const items = [
   {
@@ -23,32 +27,28 @@ const items = [
     title: 'Thermal Imaging',
     description:
       'See clearly in complete darkness and through obstructions.',
-    imageLight: 'url("/src/assets/thermal.png")',
-    imageDark: 'url("/src/assets/thermal.png")',
+    imageLight: `url(${thermal})`,
   },
   {
     icon: <SolarPowerRoundedIcon />,
     title: 'Solar-Powered Generators',
     description:
       'Enjoy eco-friendly, continuous operation with backup gasoline power for added reliability.',
-    imageLight: 'url("/src/assets/solar.png")',
-    imageDark: 'url("/src/assets/solar.png")',
+    imageLight: `url(${solar})`,
   },
   {
     icon: <FastForwardRoundedIcon />,
     title: 'Rapid Deployment',
     description:
       'Set up our mobile unit instantly and anywhere, with a fully wireless design for seamless operation.',
-    imageLight: 'url("/src/assets/deploy.png")',
-    imageDark: 'url("/src/assets/deploy.png")',
+    imageLight: `url(${deploy})`,
   },
   {
     icon: <InventoryRoundedIcon />,
     title: 'ISO9001 & ISO14001 Certified',
     description:
       'Rely on a product built with the highest standards of quality and environmental responsibility.',
-    imageLight: 'url("/src/assets/iso.png")',
-    imageDark: 'url("/src/assets/iso.png")',
+    imageLight: `url(${iso})`,
   },
 ];
 
@@ -119,9 +119,9 @@ export default function Features() {
                 minHeight: 280,
                 backgroundImage: 'var(--items-imageLight)',
                 backgroundRepeat: 'no-repeat',
-                ...theme.applyStyles('dark', {
-                  backgroundImage: 'var(--items-imageDark)',
-                }),
+                // ...theme.applyStyles('dark', {
+                //   
+                // }),
               })}
               style={{
                 '--items-imageLight': items[selectedItemIndex].imageLight,
@@ -293,13 +293,10 @@ export default function Features() {
                 backgroundImage: 'var(--items-imageLight)',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
-                ...theme.applyStyles('dark', {
-                  backgroundImage: 'var(--items-imageDark)',
-                }),
               })}
               style={{
                 '--items-imageLight': items[selectedItemIndex].imageLight,
-                '--items-imageDark': items[selectedItemIndex].imageDark,
+                // '--items-imageDark': items[selectedItemIndex].imageDark,
               }}
             />
           </Card>

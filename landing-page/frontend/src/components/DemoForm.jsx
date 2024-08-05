@@ -17,6 +17,12 @@ function DemoForm({ open, handleClose, email, setEmail }) {
     const handleCloseSubmitted = () => {
         setSubmitModal(false);
         handleClose();
+        setIndustry('');
+        setCompanySize('');
+        setName('');
+        setPhone('');
+        setEmail('');
+        reset();
     }
 
     useEffect(() => {
